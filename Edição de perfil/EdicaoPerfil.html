@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eventow - Edição do Perfil</title>
+
+    <!--CSS Boostrap-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+
+    <!--CSS-->
+    <link rel="stylesheet" href="css/style.css">
+
+    <!--JS-->
+    <script src="js.js"></script>
+
+    <!--JS Boostrap-->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+        integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"
+        integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
+        crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <!--Barra de Navegação-->
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">EventOW</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0 justify-content-center">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#">Eventos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#">Ajuda</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#">Área do Ouvinte</a>
+                    </li>
+                    <li>
+                        <a class="nav-item" href="#"><button type="button" class="btn"
+                                style="background-color: #A421A5;color: #ffffff;">Criar Evento</button></a>
+                        <a class="nav-item" href="#"><button type="button" class="btn"
+                                style="background-color: #A421A5;color: #ffffff ;">Login</button></a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!--Acessibilidade-->
+    <div vw="" class="enabled"
+        style="left: initial; right: 0px; top: 50%; bottom: initial; transform: translateY(calc(-50% - 10px));">
+        <div vw-access-button="" class="active"><img class="access-button" data-src="assets/access_icon.svg"
+                alt="Conteúdo acessível em Libras usando o VLibras Widget com opções dos Avatares Ícaro, Hosana ou Guga."
+                src="https://vlibras.gov.br/app/assets/access_icon.svg">
+            <img class="pop-up" data-src="assets/access_popup.jpg"
+                alt="Conteúdo acessível em Libras usando o VLibras Widget com opções dos Avatares Ícaro, Hosana ou Guga."
+                src="https://vlibras.gov.br/app/assets/access_popup.jpg">
+        </div>
+        <div vw-plugin-wrapper="">
+            <div vp="">
+                <div vp-box=""></div>
+                <div vp-message-box=""></div>
+                <div vp-settings=""></div>
+                <div vp-dictionary=""></div>
+                <div vp-settings-btn=""></div>
+                <div vp-info-screen=""></div>
+                <div vp-suggestion-screen=""></div>
+                <div vp-translator-screen=""></div>
+                <div vp-main-guide-screen=""></div>
+                <div vp-suggestion-button=""></div>
+                <div vp-rate-box=""></div>
+                <div vp-change-avatar=""></div>
+                <div vp-additional-options=""></div>
+                <div vp-controls=""></div>
+                <span vp-click-blocker=""></span>
+            </div>
+        </div>
+    </div>
+    <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+    <script>
+        new window.VLibras.Widget('https://vlibras.gov.br/app');
+    </script>
+
+    <!--Formulário cadastro do Ouvinte-->
+    <form method="post" class="h-40 w-50 align-middle mx-auto shadow p-3 mb-5 rounded-3"
+        style="background-color: #61d0e9c5;">
+        <div class="card p-3 overflow-auto mx-auto" style="width: 18rem; height: 25rem;">
+            <img src="./img.svg"
+                style=" object-fit: cover; display: block; width: 100%; height: 100%; overflow: hidden;"
+                class="rounded-circle" alt="..." id="preview">
+            <div class="mb-3 text-center mx-auto"><br>
+                <input class="text-centermx-auto" type="file" id="img-input" onchange="validarArquivo('#img-input')">
+            </div>
+            <div class="card-body justify-content-evenly">
+                <p class="card-text text-center ">Escolha a sua foto de perfil!</p>
+            </div>
+        </div>
+        <div class="mb-3">
+            <label for="FormNome" class="form-label">Nome Completo</label>
+            <input type="text" class="form-control" id="Nome" placeholder="Nome Completo" required>
+        </div>
+        <div class="mb-3">
+            <label for="FormEmail" class="form-label">Email</label>
+            <input type="email" class="form-control" id="FormEmail" placeholder="name@example.com" required>
+        </div>
+        <div class="mb-3">
+            <label for="FormSenha" class="form-label">Senha</label>
+            <input type="password" name="senha" class="form-control" id="senha" placeholder="Senha" required>
+            <button type="button" class="btn" id="togglePass">Mostrar Senhas</button>
+        </div>
+        <div class="mb-3">
+            <label for="FormInst" class="form-label">Instituição</label>
+            <input type="text" class="form-control" id="FormInst" placeholder="Instiuição" required>
+        </div>
+        <div class="mb-3" onclick='alert1()'>
+            <label for="exampleFormControlInput1" class="form-label">Função institucional</label>
+            <div class="input-group mb-3">
+                <label class="input-group-text disabled" for="inputFuncao">Função</label>
+                <select class="form-select" id="inputFuncao">
+                    <option value="ouvinte" selected>Ouvinte</option>
+                    <option value="chair" disabled>Chair</option>
+                    <option value="avaliador" disabled>Avaliador</option>
+                    <option value="autor" disabled>Autor</option>
+                </select>
+            </div>
+        </div>
+        <center><button type="submit" class="btn" style="background-color: #D96C2B ;">Enviar</button>
+            <button type="reset" style="background-color: #D96C2B ;" class="btn">Limpar</button>
+        </center>
+
+    </form>
+    </div>
+
+    <!--Footer-->
+    <footer>
+        <p>EventOW</p>
+    </footer>
+</body>
+
+</html>

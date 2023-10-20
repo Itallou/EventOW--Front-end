@@ -1,0 +1,7 @@
+<svg class="bd-placeholder-img rounded-circle" width="50" height="50"
+    xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Completely round image: 50x50"
+    preserveAspectRatio="xMidYMid slice" focusable="false">
+    <title>Completely round image</title>
+    <rect width="100%" height="100%" fill="#868e96"></rect>
+    <text x="10%" y="50%" fill="#dee2e6" dy=".3em">50x50</text>
+</svg>
